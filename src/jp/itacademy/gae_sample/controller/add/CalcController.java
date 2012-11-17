@@ -12,7 +12,7 @@ public class CalcController extends Controller {
         Validators v = new Validators(request);
         v.add("num1", v.required(), v.integerType());
         v.add("num2", v.required(), v.integerType());
-        v.
+        
         
         if (!v.validate())  {
             return forward("index.jsp");
