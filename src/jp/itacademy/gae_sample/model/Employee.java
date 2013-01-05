@@ -7,6 +7,7 @@ import java.util.List;
 import com.google.appengine.api.datastore.Key;
 
 import org.slim3.datastore.Attribute;
+import org.slim3.datastore.Datastore;
 import org.slim3.datastore.Model;
 
 @Model(schemaVersion = 1)
@@ -14,7 +15,17 @@ public class Employee implements Serializable {
     
     private int punishmentCount;
     
+    @Attribute(persistent = false)
+    private Dept dept;
     
+    public Dept getDept() {
+        return dept;
+    }
+
+    public void setDept(Dept dept) {
+        this.dept = dept;
+    }
+
     public int getPunishmentCount() {
         return punishmentCount;
     }
@@ -153,5 +164,13 @@ public class Employee implements Serializable {
             return false;
         }
         return true;
+    }
+    
+    public Key getDeptKey() {
+        return Datastore.createKey(Dept.class, getDeptId());
+    }
+    
+    public void setDeptKey(Key deptKey) {
+        this.deptId = deptKey.getId();
     }
 }
