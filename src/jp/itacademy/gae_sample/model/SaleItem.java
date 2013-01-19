@@ -9,18 +9,16 @@ import org.slim3.datastore.Model;
 
 @Model(schemaVersion = 1)
 public class SaleItem implements Serializable {
-    
-    
-    
+
     private Key shopKey;
     private Key itemKey;
     private String itemName;
     private int itemPrice;
     private long lastUpdateTimestamp;
-    
+
     public SaleItem() {
     }
-    
+
     public SaleItem(Shop shop, Item item) {
         setShopKey(shop.getKey());
         setItemKey(item.getKey());
@@ -78,7 +76,7 @@ public class SaleItem implements Serializable {
 
     /**
      * Returns the key.
-     *
+     * 
      * @return the key
      */
     public Key getKey() {
@@ -87,7 +85,7 @@ public class SaleItem implements Serializable {
 
     /**
      * Sets the key.
-     *
+     * 
      * @param key
      *            the key
      */
@@ -97,7 +95,7 @@ public class SaleItem implements Serializable {
 
     /**
      * Returns the version.
-     *
+     * 
      * @return the version
      */
     public Long getVersion() {
@@ -106,7 +104,7 @@ public class SaleItem implements Serializable {
 
     /**
      * Sets the version.
-     *
+     * 
      * @param version
      *            the version
      */
