@@ -23,3 +23,8 @@
   <p class="caption">左右反転</p>
   <p class="img"><img src="/images/horizontalFlip"></p>
 </div>
+
+<div>
+  <p class="caption">合成</p>
+  <p class="img"><img src="/images/composite"></p>
+</div>
