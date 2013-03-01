@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<title>sample</title>
+<style>
+div.section {
+  margin: 20px 0;
+  padding: 5px;
+  width: 270px;
+  border: solid 1px gray;
+}
+p {
+  display: inline-block;
+  padding: 5px;
+  margin: 2px;
+  background-color: whitesmoke;
+}
+div.wrapper {
+  display: inline-block;
+  background-color: gold;
+  padding: 5px;
+}
+</style>
+
+<div>
+  <button id="applyButton">実行！</button>
+</div>
+
+<div id="numbers" class="section">
+  <p>いち</p>
+  <p>にー</p>
+  <p>さん</p>
+</div>
+
+<div id="alphabets" class="section">
+  <p>えー</p>
+  <p>びー</p>
+  <p>しー</p>
+</div>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script>
+$(function() {
+	
+	
+  $("#numbers p").css("background-color", "lavender");
+  $("#alphabets p").css("background-color", "lemonchiffon");
+  
+  $("#applyButton").on("click", function() {
+	//$("#numbers").append("<p>にゃー</p>");
+	$("#numbers").append($("#alphabets p").last());
+  });
+});
+</script>

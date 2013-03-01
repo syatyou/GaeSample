@@ -1,0 +1,36 @@
+<style>
+.highlight {
+  background-color: yellow;
+}
+.del {
+  text-decoration: line-through;
+}
+</style>
+
+<div id="chapter-1" class="chapter">
+  <p>ははは</p>
+  <p class="highlight">ひひひ</p>
+  <p>ふふふ</p>
+</div>
+
+<p><button id="applyButton">実行！</button></p>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script>
+$(function() {
+  //$(".chapter p").on("click", function() {
+    //if ($(this).hasClass("highlight")) {
+      //alert("ハイライトされてます");
+    //} else {
+      //alert("ハイライトされてないよ");
+    //}
+  //});
+  //$("#applyButton").on("click", function() {
+	//$("#chapter-1 p").first().addClass("highlight");
+	//$("#chapter-1 p").removeClass("highlight");
+  //});
+  $(".chapter p").on("click", function() {
+	$(this).toggleClass("highlight");
+  })
+});
+</script>
