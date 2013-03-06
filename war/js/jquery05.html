@@ -48,7 +48,28 @@ $(function() {
   
   $("#applyButton").on("click", function() {
 	//$("#numbers").append("<p>にゃー</p>");
-	$("#numbers").append($("#alphabets p").last());
+	//$("#numbers").append($("#alphabets p").last());
+	//$("#alphabets p").last().appendTo($("#numbers"));
+	//$("#numbers").prepend("<p>にゃー</p>");
+	//$("#numbers").prepend($("#alphabets p").last());
+	//$("#alphabets").append($("#numbers p").last());
+	//$("#numbers").before("<p>にゃー</p>");
+	//$("#numbers").before($("#numbers p").first());
+	//$("#numbers p").first().insertBefore($("#numbers"));
+	//$("#numbers").after("<p>にゃー</p>");
+	//$("#numbers").after($("#numbers p").first());
+	//$("#numbers p").first().insertAfter($("#numbers"));
+	//$("#alphabets").first().insertBefore($("#numbers"));
+	//alert($("#numbers p").first().text());
+	//alert($("#numbers").text());
+	//$("#numbers").text("あぼーん");
+	//$("#alphabets").text("<em>あぼーん</em>");
+	//alert($("#numbers").html());
+	//$("#numbers").html("<p>あぼーん</p><p>あぼーん</p>");
+	//$("#alphabets").html("<em>あぼーん</em>");
+	//$("#numbers p").replaceWith("<p>にゃー</p>");
+	//$("#alphabets p").first().replaceAll($("#numbers p"));
+	$("#numbers p").replaceWith($("#numbers p"));
   });
 });
 </script>
