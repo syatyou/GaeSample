@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<title>Ajax掲示板</title>
+<style>
+body {
+  width: 350px;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+#messages {
+  margin-bottom: 20px;
+}
+.message {
+  padding: 10px 0;
+  border-bottom: dased 1px #999;
+  font-size: 13px;
+}
+.message .name, .message .createdAt {
+  text-align: right;
+  color: #666;
+}
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+</style>
+
+<div id="messages"></div>
+
+<form>
+  <p><textarea name="body"></textarea></p>
+  <p>
+    <button id="postButton">投稿</button>
+    <button id="reloadButton">再読み込み</button>
+  </p>
+</form>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script>
+  $(function() {
+var showMessages = function(messages) {
+  var divs = [];
+  for (var i = 0; i < messages.length; i++) {
+	var div = $("<div>").addClass("message");
+	$("<p>").addClass("body")
+	  .text(messages[i].body).appendTo(div);
+	$("<p>").addClass("name")
+	    .text("名無しさん@" + messages[i].remoteIp).appendTo(div);
+	$("<p>").addClass("createsAt")
+	  .text(messages[i].createdAt).appendTo(div);
+	divs.push(div);
+  }
+};	  
+  });
+</script>
