@@ -24,13 +24,14 @@
 <script>
 $(function() {
   $("#loadButton").on("click", function() {
-	$.ajax({
-	  url: "http://c.happy-kakurembo.com/res/fragment.html",
-	  type: "GET",
-	  dataType: "html"
-	}).done(function(res) {
-	  $("#contents").html(res);
-	});
+	  $("#contents").load("http://c.happy-kakurembo.com/res/fragment.html");
+	//$.ajax({
+	  //url: "http://c.happy-kakurembo.com/res/fragment.html",
+	  //type: "GET",
+	  //dataType: "html"
+	//}).done(function(res) {
+	  //$("#contents").html(res);
+	//});
   });
 });
 </script>

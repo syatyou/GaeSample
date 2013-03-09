@@ -38,13 +38,16 @@ $(function() {
     if (!z1.match(/^\d{3}$/) || !z2.match(/^\d{4}$/)) {
       return;
     }
-    $.ajax({
-      url: "http://api.aoikujira.com/zip/json/" + z1 + z2,
-      type: "GET",
-      dataType: "json"
-    }).done(function(res) {
+    $.getJSON("http://api.aoikujira.com/zip/json/" + z1 + z2, function(res) {
       $("#address").val(res.state + res.city + res.address);
     });
+    //$.ajax({
+      //url: "http://api.aoikujira.com/zip/json/" + z1 + z2,
+      //type: "GET",
+      //dataType: "json"
+    //}).done(function(res) {
+      //$("#address").val(res.state + res.city + res.address);
+    //});
   };
   
   $("#zipcode1").on("keyup", lookup);
